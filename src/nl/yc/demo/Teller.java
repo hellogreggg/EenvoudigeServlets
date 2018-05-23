@@ -29,7 +29,7 @@ public class Teller extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		teller++;
-		response.getWriter().print(teller);
+		response.getWriter().print("<a href='http://localhost:8080/Servlet2/Reset'>reset</a>" + teller);
 	
 	}
 

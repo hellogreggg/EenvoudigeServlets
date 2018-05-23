@@ -8,16 +8,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class Reset
+ * Servlet implementation class URL
  */
-@WebServlet("/Reset")
-public class Reset extends HttpServlet {
+@WebServlet("/URL/*")
+public class URL extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    
+       
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Reset() {
+    public URL() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -27,8 +27,7 @@ public class Reset extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-			Teller.teller = 0;
-			response.getWriter().print("<a href='http://localhost:8080/Servlet2/Teller'>Teller</a>");
+		response.getWriter().print(request.getRequestURL());
 	}
 
 	/**
